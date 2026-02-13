@@ -10,8 +10,8 @@ app.use(express.json());
 app.use("/auth", require("./routes/auth.routes"));
 app.use("/tasks", require("./routes/task.routes"));
 
-sequelize.sync().then(() => {
-  console.log("DB Connected");
-});
+sequelize.sync({ alter: true })
+  .then(() => console.log("DB Connected"))
+  .catch(err => console.error("DB Error:", err));
 
 module.exports = app;
