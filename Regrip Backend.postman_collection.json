@@ -1,0 +1,127 @@
+{
+  "info": {
+    "_postman_id": "df5858ed-5a6a-4d10-b51e-7f5979a06427",
+    "name": "Regrip Backend",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "45922606",
+    "_collection_link": "https://go.postman.co/collection/45922606-df5858ed-5a6a-4d10-b51e-7f5979a06427?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Send OTP",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"test@gmail.com\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://regrip-backend-production.up.railway.app/auth/send-otp",
+          "protocol": "https",
+          "host": [
+            "regrip-backend-production",
+            "up",
+            "railway",
+            "app"
+          ],
+          "path": [
+            "auth",
+            "send-otp"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Verify OTP",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"test@gmail.com\",\r\n  \"otp\": \"123456\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://regrip-backend-production.up.railway.app/auth/verify-otp",
+          "protocol": "https",
+          "host": [
+            "regrip-backend-production",
+            "up",
+            "railway",
+            "app"
+          ],
+          "path": [
+            "auth",
+            "verify-otp"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Task",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"Sample Task\",\r\n  \"description\": \"Testing API\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://regrip-backend-production.up.railway.app/tasks\n",
+          "protocol": "https",
+          "host": [
+            "regrip-backend-production",
+            "up",
+            "railway",
+            "app"
+          ],
+          "path": [
+            "tasks\n"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Tasks",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://regrip-backend-production.up.railway.app/tasks",
+          "protocol": "https",
+          "host": [
+            "regrip-backend-production",
+            "up",
+            "railway",
+            "app"
+          ],
+          "path": [
+            "tasks"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
